@@ -16,7 +16,10 @@ export default defineConfig({
   retries: 2,
   workers: 2,
 
-  reporter: 'html',
+  reporters: ['line', ['html', { 
+    open: 'always', 
+    outputFolder: 'playwright-report' 
+  }]],
 
   use: {
     headless: true,
